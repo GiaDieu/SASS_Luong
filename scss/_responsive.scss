@@ -1,0 +1,104 @@
+@include media-md {
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
+      background: transparent;
+      text-align: right;
+
+      &__item {
+        display: inline;
+        padding-right: 1.5rem;
+      }
+
+      &__link {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .about__bio {
+    font-size: 1.3rem;
+  }
+
+  .projects {
+    &__bio-image {
+      height: 40vh;
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text-secondary {
+      font-size: 3rem;
+    }
+  }
+
+  .projects__item {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .contact__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include media-lg {
+  .home {
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 1),
+        rgba($primary-color, 0.6)
+      ),
+      url("../img/PeLuong.jpg") center;
+    background-size: auto;
+  }
+  .about {
+    &__bio-image {
+      height: 60vh;
+    }
+  }
+  .projects {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__bio-image {
+      height: 60vh;
+    }
+  }
+
+  .projects__item {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .contact {
+    height: 100vh;
+    // width: 100vh;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.3),
+        rgba($primary-color, 0.9)
+      ),
+      url("../img/contact.jpg") center top;
+  }
+}
+@include media-xl {
+  .contact__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
